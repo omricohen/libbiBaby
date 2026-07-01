@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Libbi</title>
+  <meta name="description" content="Libbi's privacy policy: what we collect, how it's stored, and your rights." />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="canonical" href="https://libbibaby.com/privacy" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="Libbi app icon" />Libbi</a>
+      <div class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#premium">Premium</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="legal">
+    <h1>Privacy Policy</h1>
+    <p class="meta">
+      Effective date: May 1, 2026 &nbsp;·&nbsp; Contact:
+      <a href="mailto:hello@libbibaby.com">hello@libbibaby.com</a>
+    </p>
+
+    <h2>Who we are</h2>
+    <p>
+      Libbi is a mobile app that lets expectant and new parents record audio from ultrasound
+      appointments and use a curated sound library to help their baby sleep. The app is published
+      by Omri Cohen ("we", "us", "our"). You can reach us at
+      <a href="mailto:hello@libbibaby.com">hello@libbibaby.com</a>.
+    </p>
+
+    <h2>What data we collect</h2>
+
+    <h3>Data you provide directly</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Data</th><th>Purpose</th><th>Stored where</th></tr>
+        <tr><td>Baby profiles (name, nickname, due date or birthday, optional photo)</td><td>Organize your recordings</td><td>On your device (local database)</td></tr>
+        <tr><td>Audio recordings you capture in the app</td><td>Core app feature — play back to your baby</td><td>On your device (app sandbox)</td></tr>
+        <tr><td>Account email address and display name</td><td>Required only if you enable Premium cloud backup</td><td>Firebase Authentication</td></tr>
+        <tr><td>Custom audio files you import</td><td>Play as a sound layer in the app</td><td>On your device (app sandbox)</td></tr>
+      </table>
+    </div>
+
+    <h3>Data collected automatically (cloud features only)</h3>
+    <p>
+      If you create an account and enable cloud backup (a Premium feature), your recordings and
+      baby profile metadata are synced to Firebase Firestore and Cloud Storage under your user ID.
+      Standard Firebase server logs (IP addresses, request timestamps) are retained per Google's
+      default Firebase retention settings (typically 90 days).
+    </p>
+
+    <h3>Data we do <em>not</em> collect</h3>
+    <ul>
+      <li>We do not collect advertising IDs.</li>
+      <li>We do not use third-party analytics SDKs or embed tracking pixels.</li>
+      <li>We do not record video. Audio recording uses your device microphone only.</li>
+      <li>We do not read your contacts, calendar, location, or any other sensor.</li>
+      <li>We do not collect data from your baby. The app is designed for adults; see Children's Privacy below.</li>
+    </ul>
+
+    <h2>How we use your data</h2>
+    <ul>
+      <li><strong>To operate the app</strong> — play back recordings, organize them by baby, run the sound library, mixer, and sleep timer.</li>
+      <li><strong>To sync across devices</strong> (Premium only) — if you opt in, we copy your data to Firebase so you can restore it on a new phone or access it on multiple devices.</li>
+      <li><strong>To manage your subscription</strong> — RevenueCat processes your purchase through Apple App Store or Google Play and tells us whether your subscription is active. We never see your payment card details.</li>
+      <li><strong>To fulfill account deletion requests</strong> — when you delete your account, we run a Cloud Function that removes all your data from Firebase Firestore and Cloud Storage within 30 days.</li>
+    </ul>
+
+    <h2>Where your data is stored</h2>
+
+    <h3>Local-only (Free tier and all users by default)</h3>
+    <p>
+      Recordings and baby profiles live exclusively in your device's app sandbox. These files are
+      included in standard iOS iCloud / iTunes device backups unless you exclude the app in your
+      iOS settings. We do not control iCloud backups — that is Apple's infrastructure.
+    </p>
+
+    <h3>Cloud (Premium, opt-in only)</h3>
+    <p>If you enable cloud backup, your data is stored in Google Firebase:</p>
+    <ul>
+      <li><strong>Firebase Firestore</strong> — recording metadata (labels, durations, trim points, created dates)</li>
+      <li><strong>Firebase Cloud Storage</strong> — raw <code>.m4a</code> audio files</li>
+    </ul>
+    <p>
+      Google encrypts data at rest (AES-256) and in transit (TLS 1.2+). Firebase data is stored in
+      the <code>us-central1</code> region by default.
+    </p>
+
+    <h2>Sub-processors</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Sub-processor</th><th>Purpose</th><th>Privacy</th></tr>
+        <tr><td><strong>Google Firebase</strong> (Google LLC)</td><td>Authentication, cloud database (Firestore), file storage (Cloud Storage), server-side Cloud Functions</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td></tr>
+        <tr><td><strong>RevenueCat, Inc.</strong></td><td>Subscription management and in-app purchase validation</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
+        <tr><td><strong>Apple App Store / Google Play</strong></td><td>App distribution and payment processing</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+      </table>
+    </div>
+    <div class="callout">We do not sell or share your personal data with advertisers or data brokers.</div>
+
+    <h2>Sharing your recordings (Premium)</h2>
+    <p>
+      If you use the Share feature, we generate a public URL for a single recording. The audio file
+      is copied to a publicly accessible Cloud Storage path. Anyone with the link can play the
+      recording in a browser — no account required. We do not add tracking to share link pages.
+    </p>
+    <p>
+      You can revoke a share link at any time from the recording's menu. Revocation deletes the
+      public copy from Cloud Storage immediately; CDN caches may retain the file for up to 24 hours
+      after revocation.
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Libbi is designed for use by adults (parents and caregivers). We do not knowingly collect
+      personal data from children under 13. The app includes an age confirmation on sign-up.
+    </p>
+    <p>
+      If you believe we have inadvertently collected data from a child under 13, please contact us
+      at <a href="mailto:hello@libbibaby.com">hello@libbibaby.com</a> and we will delete it promptly.
+    </p>
+
+    <h2>Your rights and choices</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Right</th><th>How to exercise it</th></tr>
+        <tr><td><strong>Access</strong> your data</td><td>All recordings and profiles are visible in the app. Cloud data mirrors your local data.</td></tr>
+        <tr><td><strong>Delete</strong> a recording</td><td>Delete from the app; removed from local storage immediately. Cloud copy deleted on next sync.</td></tr>
+        <tr><td><strong>Delete your account</strong></td><td>Settings → Account → Delete Account. All cloud data purged within 30 days.</td></tr>
+        <tr><td><strong>Export</strong> your data</td><td>Recordings are standard <code>.m4a</code> files accessible via the Files app (iOS) or a file manager (Android).</td></tr>
+        <tr><td><strong>Opt out of cloud sync</strong></td><td>Settings → Back up to cloud → toggle off. Local data is unaffected.</td></tr>
+      </table>
+    </div>
+    <p>
+      If you are in the European Economic Area, UK, or California, additional rights may apply
+      (GDPR Articles 15–21; CCPA Section 1798.100 et seq.). Contact us at
+      <a href="mailto:hello@libbibaby.com">hello@libbibaby.com</a>.
+    </p>
+
+    <h2>Data retention</h2>
+    <ul>
+      <li><strong>Local data:</strong> retained until you delete it or uninstall the app.</li>
+      <li><strong>Cloud data:</strong> retained until you delete your account. After account deletion, all cloud data is purged within 30 days.</li>
+      <li><strong>Firebase server logs:</strong> retained per Google's standard Firebase log retention (typically 90 days).</li>
+      <li><strong>RevenueCat purchase records:</strong> retained per RevenueCat's policy (typically 90 days after subscription ends).</li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>We take reasonable technical measures to protect your data:</p>
+    <ul>
+      <li>Local recordings are stored in the app sandbox with iOS/Android platform-enforced file-level encryption.</li>
+      <li>Cloud data uses AES-256 at-rest encryption and TLS 1.2+ in transit (Firebase defaults).</li>
+      <li>Firebase Security Rules restrict read/write access to authenticated users' own documents only.</li>
+    </ul>
+    <p>
+      No method of transmission over the internet or electronic storage is 100% secure. We cannot
+      guarantee absolute security.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We will post any changes on this page and update the effective date. For material changes, we
+      will notify you via an in-app alert. Continued use of the app after changes constitutes
+      acceptance.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:hello@libbibaby.com">hello@libbibaby.com</a><br />
+      Libbi — <a href="https://libbibaby.com">libbibaby.com</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="" />Libbi</a>
+      <nav class="foot-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:hello@libbibaby.com">Contact</a>
+      </nav>
+      <p class="foot-copy">&copy; 2026 Libbi · A sound diary for the womb.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
